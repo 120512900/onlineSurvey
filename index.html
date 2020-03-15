@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 
 
 <head>
@@ -179,17 +179,17 @@
   </div>
   <div class="main">
     <div class="menu">
-      <div class="menu_bar">问卷类型</div>
+      <div class="menu_bar">Type</div>
       <div>
         <table>
           <tr>
-            <td><a href="javascript:;" id="radio2">单选</a></td>
+            <td><a href="javascript:;" id="radio2">Radio</a></td>
           </tr>
           <tr>
-            <td><a href="javascript:;" id="radio3">多选</a></td>
+            <td><a href="javascript:;" id="radio3">Checkbox</a></td>
           </tr>
           <tr>
-            <td><a href="javascript:;" id="text">问答</a></td>
+            <td><a href="javascript:;" id="text">Text</a></td>
           </tr>
         </table>
       </div>
@@ -202,10 +202,10 @@
             <input type="text" id="questionnaireName" />
           </li>
           <li>
-            <button id="btnSubmit">提交</button>
+            <button id="btnSubmit">submit</button>
           </li>
         </ul>
-        <div>注：请创建问卷后再提交</div>
+        
       </div>
       <div id="content"></div>
     </div>
@@ -230,8 +230,8 @@
       "'><label>" +
       "Q" +
       count +
-      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='请输入单选描述'/>" +
-      "<ul class='answer'><li><input type='radio'><input type='text' value='选项1'></li><li><input type='radio'><input type='text' value='选项2'> </li></ul><button class='close'>x</button><button class='add'>+</button><button class='delete'>-</button></div>";
+      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='Description'/>" +
+      "<ul class='answer'><li><input type='radio'><input type='text' value='1'></li></ul><button class='close'>x</button><button class='add'>+</button><button class='delete'>-</button></div>";
     return radio;
   }
   function formRadio3() {
@@ -246,8 +246,8 @@
       "'><label>" +
       "Q" +
       count +
-      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='请输入多选描述'/>" +
-      "<ul class='answer'><li><input type='checkbox'><input type='text' value='选项1'></li><li><input type='checkbox'><input type='text' value='选项2'></li><li><input type='checkbox'><input type='text' value='选项3'></li></ul><button class='close'>x</button><button class='add'>+</button><button class='delete'>-</button></div>";
+      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='Description'/>" +
+      "<ul class='answer'><li><input type='checkbox'><input type='text' value='1'></li></ul><button class='close'>x</button><button class='add'>+</button><button class='delete'>-</button></div>";
     return radio;
   }
 
@@ -263,13 +263,13 @@
       "'><label>" +
       "Q" +
       count +
-      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='请输入文本框描述'/><ul><li><input type='text'></li></ul><button class='close'>x</button></div>";
+      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='Description'/><ul><li><input type='text'></li></ul><button class='close'>x</button></div>";
     return text;
   }
 
   function formLabel() {
     var label =
-      "<div type='label'><textarea class='title'>请输入段落描述</textarea><button class='close'>x</button></div>";
+      "<div type='label'><textarea class='title'>Description</textarea><button class='close'>x</button></div>";
     return label;
   }
   $(".menu").on("click", "a", function () {
