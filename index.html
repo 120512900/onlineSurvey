@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<html>
+
 
 <head>
   <title></title>
@@ -179,17 +179,17 @@
   </div>
   <div class="main">
     <div class="menu">
-      <div class="menu_bar">ÎÊ¾íÀàĞÍ</div>
+      <div class="menu_bar">é—®å·ç±»å‹</div>
       <div>
         <table>
           <tr>
-            <td><a href="javascript:;" id="radio2">µ¥Ñ¡</a></td>
+            <td><a href="javascript:;" id="radio2">å•é€‰</a></td>
           </tr>
           <tr>
-            <td><a href="javascript:;" id="radio3">¶àÑ¡</a></td>
+            <td><a href="javascript:;" id="radio3">å¤šé€‰</a></td>
           </tr>
           <tr>
-            <td><a href="javascript:;" id="text">ÎÊ´ğ</a></td>
+            <td><a href="javascript:;" id="text">é—®ç­”</a></td>
           </tr>
         </table>
       </div>
@@ -198,14 +198,14 @@
       <div class="head">
         <ul>
           <li>
-            ÎÊ¾íID£º
+            é—®å·IDï¼š
             <input type="text" id="questionnaireName" />
           </li>
           <li>
-            <button id="btnSubmit">Ìá½»</button>
+            <button id="btnSubmit">æäº¤</button>
           </li>
         </ul>
-        <div>×¢£ºÇë´´½¨ÎÊ¾íºóÔÙÌá½»</div>
+        <div>æ³¨ï¼šè¯·åˆ›å»ºé—®å·åå†æäº¤</div>
       </div>
       <div id="content"></div>
     </div>
@@ -230,8 +230,8 @@
       "'><label>" +
       "Q" +
       count +
-      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='ÇëÊäÈëµ¥Ñ¡ÃèÊö'/>" +
-      "<ul class='answer'><li><input type='radio'><input type='text' value='Ñ¡Ïî1'></li><li><input type='radio'><input type='text' value='Ñ¡Ïî2'> </li></ul><button class='close'>x</button><button class='add'>+</button><button class='delete'>-</button></div>";
+      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='è¯·è¾“å…¥å•é€‰æè¿°'/>" +
+      "<ul class='answer'><li><input type='radio'><input type='text' value='é€‰é¡¹1'></li><li><input type='radio'><input type='text' value='é€‰é¡¹2'> </li></ul><button class='close'>x</button><button class='add'>+</button><button class='delete'>-</button></div>";
     return radio;
   }
   function formRadio3() {
@@ -246,8 +246,8 @@
       "'><label>" +
       "Q" +
       count +
-      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='ÇëÊäÈë¶àÑ¡ÃèÊö'/>" +
-      "<ul class='answer'><li><input type='checkbox'><input type='text' value='Ñ¡Ïî1'></li><li><input type='checkbox'><input type='text' value='Ñ¡Ïî2'></li><li><input type='checkbox'><input type='text' value='Ñ¡Ïî3'></li></ul><button class='close'>x</button><button class='add'>+</button><button class='delete'>-</button></div>";
+      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='è¯·è¾“å…¥å¤šé€‰æè¿°'/>" +
+      "<ul class='answer'><li><input type='checkbox'><input type='text' value='é€‰é¡¹1'></li><li><input type='checkbox'><input type='text' value='é€‰é¡¹2'></li><li><input type='checkbox'><input type='text' value='é€‰é¡¹3'></li></ul><button class='close'>x</button><button class='add'>+</button><button class='delete'>-</button></div>";
     return radio;
   }
 
@@ -263,13 +263,13 @@
       "'><label>" +
       "Q" +
       count +
-      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='ÇëÊäÈëÎÄ±¾¿òÃèÊö'/><ul><li><input type='text'></li></ul><button class='close'>x</button></div>";
+      ":</label>&nbsp;&nbsp;<input type='text' class='title' value='è¯·è¾“å…¥æ–‡æœ¬æ¡†æè¿°'/><ul><li><input type='text'></li></ul><button class='close'>x</button></div>";
     return text;
   }
 
   function formLabel() {
     var label =
-      "<div type='label'><textarea class='title'>ÇëÊäÈë¶ÎÂäÃèÊö</textarea><button class='close'>x</button></div>";
+      "<div type='label'><textarea class='title'>è¯·è¾“å…¥æ®µè½æè¿°</textarea><button class='close'>x</button></div>";
     return label;
   }
   $(".menu").on("click", "a", function () {
@@ -376,7 +376,7 @@
     var template = JSON.stringify(tempsur);
 
     /////////////////////////////////////////////////////////////////////////////////////////////
-    ////////////////////////////////ÕâÀï´òÓ¡ÁËJSON×Ö·û´®///////////////////////////////////////
+    ////////////////////////////////è¿™é‡Œæ‰“å°äº†JSONå­—ç¬¦ä¸²///////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////
 
     console.log(template);
@@ -385,32 +385,32 @@
     showqrcode(template)
     ///
 
-    /*json¸ñÊ½Ê¾Àı£º
+    /*jsonæ ¼å¼ç¤ºä¾‹ï¼š
 {
 "survey": {
   "id": "123555",
   "len": "3",
   "questions": [{
     "type": "radio",
-    "question": "ÇëÊäÈëµ¥Ñ¡ÃèÊö",
+    "question": "è¯·è¾“å…¥å•é€‰æè¿°",
     "options": [{
-      "1": "Ñ¡Ïî1"
+      "1": "é€‰é¡¹1"
     }, {
-      "2": "Ñ¡Ïî2"
+      "2": "é€‰é¡¹2"
     }]
   }, {
     "type": "checkbox",
-    "question": "ÇëÊäÈë¶àÑ¡ÃèÊö",
+    "question": "è¯·è¾“å…¥å¤šé€‰æè¿°",
     "options": [{
-      "1": "Ñ¡Ïî1"
+      "1": "é€‰é¡¹1"
     }, {
-      "2": "Ñ¡Ïî2"
+      "2": "é€‰é¡¹2"
     }, {
-      "3": "Ñ¡Ïî3"
+      "3": "é€‰é¡¹3"
     }]
   }, {
     "type": "text",
-    "question": "ÇëÊäÈëÎÄ±¾¿òÃèÊö"
+    "question": "è¯·è¾“å…¥æ–‡æœ¬æ¡†æè¿°"
   }]
 }
 }
@@ -485,8 +485,8 @@
     if (type == "label") {
       currentObj.remove();
     } else {
-      //´øÓĞQnµÄdiv£¬ĞèÒª¸ü¸ÄdivÖĞnÖµ£¬²¢ÇÒcount--
-      var cur_number = currentObj.attr("number"); //µ±Ç°number
+      //å¸¦æœ‰Qnçš„divï¼Œéœ€è¦æ›´æ”¹divä¸­nå€¼ï¼Œå¹¶ä¸”count--
+      var cur_number = currentObj.attr("number"); //å½“å‰number
       currentObj.remove();
       $("#content div[type!=label]").each(function () {
         var number = $(this).attr("number");
@@ -512,12 +512,12 @@
       .find("ul li").length;
     if (type == "radio") {
       var content =
-        "<li><input type='radio'><input type='text' value='Ñ¡Ïî" +
+        "<li><input type='radio'><input type='text' value='é€‰é¡¹" +
         (length + 1) +
         "'></li>";
     } else {
       var content =
-        "<li><input type='checkbox'><input type='text' value='Ñ¡Ïî" +
+        "<li><input type='checkbox'><input type='text' value='é€‰é¡¹" +
         (length + 1) +
         "'></li>";
     }
@@ -542,8 +542,8 @@
     var qrcodeobj = new QRCode(qrcode, { width: 400, height: 400 })
     qrcodeobj.makeCode(str)
     document.getElementsByTagName("body")[0].appendChild(qrcode)
-    $('#cover').css('display', 'block'); //ÏÔÊ¾ÕÚÕÖ²ã  
-    $('#cover').css('height', '100%'); //ÏÔÊ¾ÕÚÕÖ²ã  
+    $('#cover').css('display', 'block'); //æ˜¾ç¤ºé®ç½©å±‚  
+    $('#cover').css('height', '100%'); //æ˜¾ç¤ºé®ç½©å±‚  
 
   }
   function removeqrcode() {
